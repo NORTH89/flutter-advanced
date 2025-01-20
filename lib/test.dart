@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_advanced/domain/app.dart';
+import 'package:flutter_advanced/app/app.dart';
 
 class Test extends StatelessWidget {
   const Test({super.key});
