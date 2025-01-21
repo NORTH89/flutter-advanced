@@ -2,42 +2,53 @@ import 'package:flutter/material.dart';
 import 'font_manager.dart';
 
 // implement the text style method
-TextStyle _getTextStyle(double fontSize, String fontFamily,FontWeight fontWeight, Color color) {
+TextStyle _getTextStyle(
+    double fontSize, String fontFamily, FontWeight fontWeight, Color color) {
   return TextStyle(
     fontSize: fontSize,
     fontFamily: fontFamily,
     color: color,
   );
 }
+
 // implement the getRegularTextStyle method
-TextStyle regularTextStyle(double fontSize,fontWeight, Color color) {
+TextStyle regularTextStyle(
+    {double fontSize = FontSize.small,
+    fontWeight = FontManager,
+    required Color color}) {
   return _getTextStyle(
-    fontSize = FontSize.small,
+    fontSize,
     'Montserrat-Regular',
-    fontWeight = FontManager.regular,
+    fontWeight,
     color,
   );
 }
+
 // implement lightTextStyle method
-TextStyle lightTextStyle(double fontSize, Color color) {
+TextStyle lightTextStyle(
+    {double fontSize = FontSize.small, required Color color}) {
   return _getTextStyle(
-    fontSize = FontSize.small,
+    fontSize,
     'Montserrat-Light',
     FontManager.light,
     color,
   );
 }
+
 //implement boldTextStyle method
-TextStyle boldTextStyle(double fontSize, Color color) {
+TextStyle boldTextStyle(
+    {double fontSize = FontSize.extraLarge, required Color color}) {
   return _getTextStyle(
-    fontSize = FontSize.small,
+    fontSize,
     'Montserrat-Bold',
     FontManager.bold,
     color,
   );
 }
+
 //implement mediumTextStyle method
-TextStyle mediumTextStyle(double fontSize, Color color) {
+TextStyle mediumTextStyle(
+    {double fontSize = FontSize.medium, required Color color}) {
   return _getTextStyle(
     fontSize = FontSize.small,
     'Montserrat-Medium',
@@ -47,9 +58,10 @@ TextStyle mediumTextStyle(double fontSize, Color color) {
 }
 
 // implement the semiBoldTextStyle method
-TextStyle semiBoldTextStyle(double fontSize, Color color) {
+TextStyle semiBoldTextStyle(
+    {double fontSize = FontSize.large, required Color color}) {
   return _getTextStyle(
-    fontSize = FontSize.small,
+    fontSize,
     'Montserrat-SemiBold',
     FontManager.semiBold,
     color,
