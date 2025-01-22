@@ -36,10 +36,107 @@ ThemeData getApplicationTheme() {
         borderRadius: BorderRadius.circular(10),
       ),
     ),
+
     // button theme
+    buttonTheme: ButtonThemeData(
+      buttonColor: ColorManager.primaryColor,
+      textTheme: ButtonTextTheme.primary,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15),
+      ),
+    ),
+
+    // elevated button theme
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        textStyle: WidgetStateProperty.all<TextStyle>(
+          regularTextStyle(
+            fontSize: FontSize.small,
+            color: ColorManager.white,
+          ),
+        ),
+        backgroundColor:
+            WidgetStateProperty.all<Color>(ColorManager.primaryColor),
+        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15),
+          ),
+        ),
+      ),
+    ),
 
     // text theme
+    textTheme: TextTheme(
+      headlineLarge: semiBoldTextStyle(
+        color: ColorManager.darkGrey,
+        fontSize: FontSize.extraLarge,
+      ),
+      headlineMedium: mediumTextStyle(
+        color: ColorManager.lightGrey,
+        fontSize: FontSize.large,
+      ),
+      headlineSmall: regularTextStyle(
+        color: ColorManager.grey1,
+        fontSize: FontSize.medium,
+      ),
+      bodySmall: regularTextStyle(
+        color: ColorManager.grey,
+        fontSize: FontSize.small,
+      ),
+    ),
 
     // input decoration theme
+    inputDecorationTheme: InputDecorationTheme(
+      contentPadding: EdgeInsets.all(AppPadding.small),
+      // hint style
+      hintStyle: regularTextStyle(
+        fontSize: FontSize.small,
+        color: ColorManager.grey1,
+      ),
+      // label style
+      labelStyle: mediumTextStyle(
+        fontSize: FontSize.small,
+        color: ColorManager.darkGrey,
+      ),
+      //error style
+      errorStyle: regularTextStyle(
+        fontSize: FontSize.small,
+        color: ColorManager.error,
+      ),
+      // focused border
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(15),
+        borderSide: BorderSide(
+          color: ColorManager.primaryColor,
+          width: AppSize.small,
+        ),
+      ),
+      // enabled border
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(15),
+        borderSide: BorderSide(
+          color: ColorManager.grey1,
+          width: AppSize.small,
+        ),
+      ),
+
+      // error border
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(15),
+        borderSide: BorderSide(
+          color: ColorManager.error,
+          width: AppSize.small,
+        ),
+      ),
+
+      // focused error border
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(15),
+        borderSide: BorderSide(
+          color: ColorManager.primaryColor,
+          width: AppSize.small,
+        ),
+      ),
+    ),
   );
 }
