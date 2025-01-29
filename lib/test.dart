@@ -9,6 +9,7 @@ class Test extends StatelessWidget {
   }
 
   void getAppState(){
+    // ignore: avoid_print
     print(MyApp.instance.appState);
   }
 
